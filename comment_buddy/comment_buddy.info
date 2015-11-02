@@ -1,0 +1,5 @@
+name = Comment Buddy
+description = Displays messages to the user whenever they create, edit or delete a comment.
+package = Micah's Modules
+core = 7.x
+files[] = comment_buddy.module

@@ -1,0 +1,5 @@
+name = Shift Cipher
+description = a module which encrypts user input using a shift cipher.
+package = Micah's Modules
+core = 7.x
+files[] = shift_cipher.module

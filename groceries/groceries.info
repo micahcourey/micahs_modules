@@ -1,0 +1,5 @@
+name = Groceries
+description = Creates a menu link leading to a page displaying a grocery list that contains a food type, price per item and quantity of items.
+package = Micah's Modules
+core = 7.x
+files[] = groceries.module

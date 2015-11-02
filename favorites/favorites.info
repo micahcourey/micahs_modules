@@ -1,0 +1,5 @@
+name = Favorites
+description = Creates 3 menu items, each item leads to a page displaying a list of items.
+package = Micah's Modules
+core = 7.x
+files[] = favorites.module

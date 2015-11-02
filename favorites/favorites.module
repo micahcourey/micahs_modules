@@ -1,0 +1,47 @@
+<?php
+
+function favorites_menu()
+{
+    $items = array();
+    $items['favorite_movies'] = array(
+            'title' => 'My Favorite Movies',
+            'page callback' => 'favorite_movies',
+            'access callback' => TRUE,
+            'type' => MENU_NORMAL_ITEM,
+        );
+    $items['favorite_books'] = array(
+            'title' => 'My Favorite Books',
+            'page callback' => 'favorite_books',
+            'access callback' => TRUE,
+            'type' => MENU_NORMAL_ITEM,
+        );
+    $items['favorite_songs'] = array(
+            'title' => 'My Favorite Songs',
+            'page callback' => 'favorite_songs',
+            'access callback' => TRUE,
+            'type' => MENU_NORMAL_ITEM,
+        );
+    return $items;
+}
+
+function favorite_movies() {
+    return '<p>Here are 3 of my favorite movies</p>
+            <a href="http://www.imdb.com/title/tt0128442/?ref_=fn_al_tt_1">Rounders</a><br>
+            <a href="http://www.imdb.com/title/tt0110912/?ref_=nv_sr_1">Pulp Fiction</a><br>
+            <a href="http://www.imdb.com/title/tt0088763/?ref_=nv_sr_1">Back to the Future</a>
+    ';
+}
+
+function favorite_books() {
+    return '<p>Here are 3 of my favorite books</p>
+            <a href="http://www.amazon.com/Elon-Musk-SpaceX-Fantastic-Future/dp/0062301233">Elon Musk: Tesla, SpaceX, and the Quest for a Fantastic Future</a><br>
+            <a href="http://www.amazon.com/Becoming-Steve-Jobs-Evolution-Visionary/dp/0385347405">Becoming Steve Jobs</a><br>
+            <a href="http://www.amazon.com/The-Martian-Novel-Andy-Weir-ebook/dp/B00EMXBDMA">The Martian</a>
+    ';
+}
+
+function favorite_songs() {
+    return "<p>Here are 3 of my favorite songs</p>
+            <p>I couldn't pick just 3 so here are over 600 of my favorite songs and mixes on <a href='https://soundcloud.com/micahcourey/likes'>my soundcloud</a></p>
+    ";
+}

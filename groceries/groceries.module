@@ -1,0 +1,54 @@
+<?php
+
+function groceries_menu()
+{
+    $items = array();
+    $items['groceries'] = array(
+            'title' => 'Grocery List',
+            'page callback' => 'groceries_display',
+            'access callback' => TRUE,
+            'type' => MENU_NORMAL_ITEM,
+        );
+    return $items;
+}
+
+function groceries_display() {
+    $food['eggs'] = array(
+        'name' => 'eggs',
+        'price' => 1.99,
+        'quantity' => 1000,
+    );
+    $food['milk'] = array(
+        'name' => 'milk',
+        'price' => 4.99,
+        'quantity' => 200,
+    );
+    $food['cereal'] = array(
+        'name' => 'cereal',
+        'price' => 5.29,
+        'quantity' => 500,
+    );
+    $food['chocolate covered potato chips'] = array(
+        'name' => 'chocolate covered potato chips',
+        'price' => 4.59,
+        'quantity' => 15,
+    );
+
+    $output = "";
+    $total_price = 0;
+
+    foreach($food as $item) {
+        $name = $item['name'];
+        $price = $item['price'];
+        $quantity = $item['quantity'];
+        $total_items = $price * $quantity;
+        $total_price += $total_items;
+        $output .= '<h1>' . $name . '</h1>' .
+            '<li>' . $name . ' costs $' . $price . ' and we have ' . $quantity . ' in stock.' .
+            '<li>' . 'Your total for this item will be $' . $total_items . '</li>';
+     }
+
+     $output .= '<h3>' . 'your total bill will be $' . $total_price . ' thanks for shopping' . '</h3>';
+
+     return $output;
+}
