@@ -1,6 +1,6 @@
 name = My Date
 description = Processes dates.
-package = Micahs Modules
+package = Micah's Modules
 core = 7.x
 files[] = mydate.module
 files[] = mydate.test
